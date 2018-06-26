@@ -25,7 +25,7 @@ export class InformacionService {
   	}
 
   	public carga_sobre_nosotros(){
-  		this.http.get("https://portafolio-5cc8f.firebaseio.com/equipo.json")
+  		this.http.get("https://servicio/equipo.json")
   		.subscribe(data=>{
   			console.log(data.json());
   			this.cargadaSobreNosotros = true;
