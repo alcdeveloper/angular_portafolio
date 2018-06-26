@@ -16,7 +16,7 @@ export class ProductosService {
    	this.cargando_productos= true;
      let promesa = new Promise((resolve, reject)=>{
 
-         	this.http.get('https://portafolio-5cc8f.firebaseio.com/productos_idx.json')
+         	this.http.get('https://servivio.json')
          	.subscribe( res => {
          		console.log(res.json());
          		setTimeout(()=>{
@@ -34,7 +34,7 @@ export class ProductosService {
    }
 
    public cargar_producto(cod:string){
-   		return this.http.get(`https://portafolio-5cc8f.firebaseio.com/productos/${cod}.json`)
+   		return this.http.get(`{{servicio}}/productos/${cod}.json`)
    }
 
 
